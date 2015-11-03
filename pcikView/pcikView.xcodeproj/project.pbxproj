@@ -33,6 +33,7 @@
 		CC3572A41BE72C64000A5CE2 /* toolicon.png in Resources */ = {isa = PBXBuildFile; fileRef = CC3572961BE72C64000A5CE2 /* toolicon.png */; };
 		CCE2019F1BE75DAE00ED8B3B /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE2019E1BE75DAE00ED8B3B /* ThirdViewController.m */; };
 		CCE201A21BE784EC00ED8B3B /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE201A11BE784EC00ED8B3B /* FourthViewController.m */; };
+		CCE201DA1BE7971000ED8B3B /* FivethViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE201D91BE7971000ED8B3B /* FivethViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		CCE2019E1BE75DAE00ED8B3B /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		CCE201A01BE784EC00ED8B3B /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
 		CCE201A11BE784EC00ED8B3B /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
+		CCE201D81BE7971000ED8B3B /* FivethViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FivethViewController.h; sourceTree = "<group>"; };
+		CCE201D91BE7971000ED8B3B /* FivethViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FivethViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,14 +130,16 @@
 				CC35725B1BE72BA0000A5CE2 /* AppDelegate.m */,
 				CC3572601BE72BA0000A5CE2 /* ViewController.h */,
 				CC3572611BE72BA0000A5CE2 /* ViewController.m */,
-				CCE2019D1BE75DAE00ED8B3B /* ThirdViewController.h */,
-				CCE2019E1BE75DAE00ED8B3B /* ThirdViewController.m */,
 				CC35727F1BE72C1B000A5CE2 /* FirstViewController.h */,
 				CC3572801BE72C1B000A5CE2 /* FirstViewController.m */,
 				CC3572821BE72C28000A5CE2 /* SecondViewController.h */,
 				CC3572831BE72C28000A5CE2 /* SecondViewController.m */,
+				CCE2019D1BE75DAE00ED8B3B /* ThirdViewController.h */,
+				CCE2019E1BE75DAE00ED8B3B /* ThirdViewController.m */,
 				CCE201A01BE784EC00ED8B3B /* FourthViewController.h */,
 				CCE201A11BE784EC00ED8B3B /* FourthViewController.m */,
+				CCE201D81BE7971000ED8B3B /* FivethViewController.h */,
+				CCE201D91BE7971000ED8B3B /* FivethViewController.m */,
 				CC3572631BE72BA0000A5CE2 /* Main.storyboard */,
 				CC3572661BE72BA0000A5CE2 /* Images.xcassets */,
 				CC3572681BE72BA0000A5CE2 /* LaunchScreen.xib */,
@@ -332,6 +337,7 @@
 			files = (
 				CCE201A21BE784EC00ED8B3B /* FourthViewController.m in Sources */,
 				CC3572841BE72C28000A5CE2 /* SecondViewController.m in Sources */,
+				CCE201DA1BE7971000ED8B3B /* FivethViewController.m in Sources */,
 				CC35725C1BE72BA0000A5CE2 /* AppDelegate.m in Sources */,
 				CC35725F1BE72BA0000A5CE2 /* pcikView.xcdatamodeld in Sources */,
 				CC3572811BE72C1B000A5CE2 /* FirstViewController.m in Sources */,
