@@ -13,6 +13,8 @@
 @interface FivethViewController ()<UIPickerViewDataSource,UIPickerViewDelegate,UIPickerViewAccessibilityDelegate>
 @property (nonatomic,strong) NSArray *datas;
 @property (nonatomic,strong) UIPickerView *pickView;
+@property (nonatomic,strong) UILabel *lable;
+@property (nonatomic )NSInteger hardLevel;
 @end
 
 @implementation FivethViewController
@@ -20,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setPickerView];
+    _hardLevel = 5;
     
 }
 -(void)setPickerView
@@ -38,13 +41,37 @@
     [btn setTitle:@"摇一摇" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UILabel *lable = [[UILabel alloc] initWithFrame:CGRectMake(130, 300, 100, 40)];
+    [self.view addSubview:lable];
+    _lable = lable;
 }
 -(void)btnClick:(UIButton *)btn
 {
+    _lable.text = @"";
+    NSInteger numOfRowContinous = 1;
+    NSInteger compareRow = 0;
+    BOOL isWin = NO;
     
     for (int i = 0; i < 5; i ++) {
         NSInteger selectedRow = round(random()%_datas.count);
         [_pickView selectRow:selectedRow inComponent:i animated:YES];
+        
+        if (i == 0) {
+            compareRow = selectedRow;
+            numOfRowContinous = 1;
+        }else{
+            if (compareRow == selectedRow) {
+                numOfRowContinous ++;
+            }
+            compareRow = selectedRow;
+        }
+        if (numOfRowContinous >= _hardLevel) {
+            isWin = YES;
+        }
+    }
+    if (isWin) {
+        _lable.text = @"赢了";
     }
     
 
