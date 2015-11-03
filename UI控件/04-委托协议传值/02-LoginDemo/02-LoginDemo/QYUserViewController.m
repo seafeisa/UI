@@ -1,0 +1,52 @@
+//
+//  QYUserViewController.m
+//  02-LoginDemo
+//
+//  Created by qingyun on 15/10/17.
+//  Copyright (c) 2015年 hnqingyun. All rights reserved.
+//
+
+#import "QYUserViewController.h"
+#import "QYChangeLabelValue.h"
+@interface QYUserViewController ()<QYChangeLabelValue>
+@property (strong, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UILabel *nextLabel;
+
+@end
+
+@implementation QYUserViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    _label.text = [NSString stringWithFormat:@"欢迎您,%@",_userNameString];
+    // Do any additional setup after loading the view.
+}
+- (IBAction)logout:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
+
+-(void)changeLabelValue:(NSString *)value
+{
+    _nextLabel.text = value;
+}
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    //获取目标视图控制器
+    UIViewController *dstVC = segue.destinationViewController;
+    
+    [dstVC setValue:_nextLabel.text forKeyPath:@"text"];
+    
+    //把当前视图控制器设置成目标视图控制器的代理
+    [dstVC setValue:self forKeyPath:@"delegate"];
+
+}
+
+
+@end
